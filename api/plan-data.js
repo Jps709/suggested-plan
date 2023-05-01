@@ -1,10 +1,16 @@
 export default async function handler(request, res) {
   const plan = [
     {
-      weekNum: '',
-      compTime: '',
-      weekTitle: '',
-      weekDescription: '',
+      weekNum: '1',
+      compTime: '6 Hours',
+      weekTitle: 'Week 1',
+      weekDescription: 'Filler text...',
+    },
+    {
+      weekNum: '1',
+      compTime: '6 Hours',
+      weekTitle: 'Week 1',
+      weekDescription: 'Filler text...',
     },
   ];
 

@@ -8,18 +8,18 @@ export class PlanTemplate extends LitElement {
 
   static get properties() {
     return {
-      plan: { type: Array },
+      plans: { type: Array },
     };
   }
 
   constructor() {
     super();
-    this.plan = [];
+    this.plans = [];
     this.updatePlan();
   }
 
   updatePlan() {
-    const address = new URL('../api/plan-data.js', import.meta.url).href;
+    const address = '../api/plan-data.js';
     fetch(address)
       .then(response => {
         if (response.ok) {
@@ -28,18 +28,22 @@ export class PlanTemplate extends LitElement {
         return [];
       })
       .then(data => {
-        this.plan = data;
+        this.plans = data;
       });
   }
 
-  static get style() {
-    return css``;
+  static get styles() {
+    return css`
+      .wrapper {
+        border: 2px solid overscroll-behavior-block;
+      }
+    `;
   }
 
   render() {
     return html`
       <div class="wrapper">
-        ${this.plan.map(
+        ${this.plans.map(
           plan => html`
             <div class="item">
               <suggested-plan
