@@ -14,6 +14,26 @@ export class SuggestedPlan extends LitElement {
     :host {
       display: block;
     }
+    .wrapper {
+      display: flex;
+      margin: 10px;
+    }
+    .week {
+      text-align: center;
+      width: 25%;
+    }
+    .week-info {
+      width: 75%;
+      border-bottom: 1px gray;
+    }
+    .wTitle {
+      font-size: 15px;
+    }
+    .cTime {
+    }
+    .wDescription {
+      font-size: 10px;
+    }
   `;
 
   constructor() {
@@ -28,16 +48,14 @@ export class SuggestedPlan extends LitElement {
   render() {
     return html`
       <div class="wrapper">
-        <div class="weekly-syllabus">
-          <div class="week">
-            <p>Week</p>
-            ${this.weekNum}
-          </div>
-          <div class="week-info">
-            ${this.compTime}
-            <p>${this.weekTitle}</p>
-            <p>${this.weekDescription}</p>
-          </div>
+        <div class="week">
+          <p>WEEK</p>
+          <p>${this.weekNum}</p>
+        </div>
+        <div class="week-info">
+          <p class="cTime">${this.compTime}</p>
+          <p class="wTitle">${this.weekTitle}</p>
+          <p class="wDescription">${this.weekDescription}</p>
         </div>
       </div>
     `;

@@ -42,14 +42,13 @@ export class PlanTemplate extends LitElement {
         ${this.plan.map(
           plan => html`
             <div class="item">
-              <plan-template
+              <suggested-plan
                 weekNum="${plan.weekNum}"
                 compTime="${plan.compTime}"
                 weekTitle="${plan.weekTitle}"
                 weekDescription="${plan.weekDescription}"
               >
-              </plan-template>
-              <div></div>
+              </suggested-plan>
             </div>
           `
         )}
