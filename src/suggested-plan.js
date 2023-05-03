@@ -13,6 +13,7 @@ export class SuggestedPlan extends LitElement {
   static styles = css`
     :host {
       display: block;
+      font-size: 18px;
     }
     .wrapper {
       display: flex;
@@ -21,18 +22,28 @@ export class SuggestedPlan extends LitElement {
     .week {
       text-align: center;
       width: 25%;
+      font-weight: 200px;
+      letter-spacing: -0.1px;
     }
+
     .week-info {
+      border-bottom: 2px inset #808080;
+      padding-bottom: 20px;
       width: 75%;
-      border-bottom: 1px gray;
     }
     .wTitle {
-      font-size: 15px;
+      font-size: 30px;
+    }
+    .wNum {
+      font-size: 35px;
     }
     .cTime {
+      color: #1f1f1f;
+      font-weight: 200px;
     }
     .wDescription {
-      font-size: 10px;
+      font-size: 18px;
+      margin: 0px 0px 15px;
     }
   `;
 
@@ -50,7 +61,7 @@ export class SuggestedPlan extends LitElement {
       <div class="wrapper">
         <div class="week">
           <p>WEEK</p>
-          <p>${this.weekNum}</p>
+          <p class="wNum">${this.weekNum}</p>
         </div>
         <div class="week-info">
           <p class="cTime">${this.compTime}</p>

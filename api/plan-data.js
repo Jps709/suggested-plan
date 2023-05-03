@@ -2,15 +2,15 @@ export default async function handler(request, res) {
   const plan = [
     {
       weekNum: '1',
-      compTime: '6 Hours',
-      weekTitle: 'Week 1',
-      weekDescription: 'Filler text...',
+      compTime: '2 hours to complete',
+      weekTitle: 'Why take this course?',
+      weekDescription: '4 videos (Total 13 min), 11 readings',
     },
     {
-      weekNum: '1',
-      compTime: '6 Hours',
-      weekTitle: 'Week 1',
-      weekDescription: 'Filler text...',
+      weekNum: '2',
+      compTime: '2 hours to complete',
+      weekTitle: 'Misconceptions About Happiness',
+      weekDescription: 'What do we think will make us happy?',
     },
   ];
 
